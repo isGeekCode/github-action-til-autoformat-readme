@@ -1,5 +1,5 @@
 # TIL
-> Today I Learned
+> Today I Learned!
 
 {{ if ne .InputDescription "" }}
 {{- .InputDescription -}}
@@ -19,7 +19,7 @@ _{{ len .AllTils }} TILs and counting..._
 ### Categories
 {{/* CATEGORY INDEX */}}
 {{- range $category, $tils := .Tils }}
-- [{{ $category }}](#{{ $category }})
+- [{{ $category }}](#{{ $category | lower }})
 {{- end }}
 {{- /* TILS GROUPED BY CATEGORIES */ -}}
 {{ range $category, $tils := .Tils }}
